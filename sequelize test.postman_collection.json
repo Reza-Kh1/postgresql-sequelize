@@ -1,0 +1,1196 @@
+{
+	"info": {
+		"_postman_id": "942d103a-fc1d-42e6-a56a-e00a9e9b6ef1",
+		"name": "sequelize test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27124581"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"reza\",\r\n    \"password\": \"4545\",\r\n    \"phone\": \"09391235651\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/node/api-v1/user",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImFlN2MzN2FlLWQyNDAtNDZlNC04MDA1LTdiOWIzZTkxYmVjMyIsIm5hbWUiOiJyZXphIiwicm9sZSI6IkFETUlOIiwicGFzc3dvcmQiOm51bGwsImVtYWlsIjpudWxsLCJwaG9uZSI6IjA5MzkxMjM1NjU4IiwiaWF0IjoxNzAxMzU0NzMxLCJleHAiOjE3MDM5NDY3MzF9.GeuxjL8BAhNZL7ODGfFUCSeI3l0XZqyPI89HywpYHRM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/node/api-v1/user?page=1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"user"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\":\"09391235658\",\r\n    \"password\":\"4545\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/node/api-v1/user/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/node/api-v1/user/c9e1ce36-71a2-4a6e-8a3c-2a2f3a2dc3cc",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"user",
+								"c9e1ce36-71a2-4a6e-8a3c-2a2f3a2dc3cc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"kol@gmail.com\",\r\n    \"name\":\"انسیه\",\r\n    \"role\":\"ADMIN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/node/api-v1/user/78e05ddf-9a65-4940-a372-09e9ca4c8d58",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"user",
+								"78e05ddf-9a65-4940-a372-09e9ca4c8d58"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/node/api-v1/user/c9e1ce36-71a2-4a6e-8a3c-2a2f3a2dc3cc",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"user",
+								"c9e1ce36-71a2-4a6e-8a3c-2a2f3a2dc3cc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Get All Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/node/api-v1/product?page=1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"product"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"iphone\",\r\n    \"slug\": \"opl\",\r\n    \"price\": 45000,\r\n    \"description\": \"better iphone\",\r\n    \"quantity\": 6,\r\n    \"idUser\": \"1d80ba85-e0fe-40b5-a0b0-9638f597b50c\",\r\n    \"categoryId\":1,\r\n    \"color\":[\"black\",\"blue\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/node/api-v1/product",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/node/api-v1/product/2",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"product",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/node/api-v1/product/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"laptop\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/node/api-v1/product/7",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"product",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Product",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/node/api-v1/product/search?text=sam&price=40000-50000&color=blue-black&categoryId=1&order=createdAt-DESC,price-ASC&page=2",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"product",
+								"search"
+							],
+							"query": [
+								{
+									"key": "text",
+									"value": "sam"
+								},
+								{
+									"key": "price",
+									"value": "40000-50000"
+								},
+								{
+									"key": "color",
+									"value": "blue-black"
+								},
+								{
+									"key": "categoryId",
+									"value": "1"
+								},
+								{
+									"key": "order",
+									"value": "createdAt-DESC,price-ASC"
+								},
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Get All Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/node/api-v1/category",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/node/api-v1/category/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"android\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/node/api-v1/category",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Category",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"lop\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/node/api-v1/category/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Category",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/node/api-v1/category/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sub Category",
+			"item": [
+				{
+					"name": "Get All SubCategory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/node/api-v1/sub-category",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"sub-category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create SubCategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"kol\",\r\n    \"categorId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/node/api-v1/sub-category",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"sub-category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single SubCategory",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/node/api-v1/sub-category/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"sub-category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update SubCategory",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ok\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/node/api-v1/sub-category/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"sub-category",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete SubCategory",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/node/api-v1/sub-category/2",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"sub-category",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Review",
+			"item": [
+				{
+					"name": "Get All Reviews",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/node/api-v1/reviews",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Review",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\": \"a6751708-e33c-4f6a-ae3a-e26e5e04a04b\",\r\n    \"comment\": \"its goood\",\r\n    // \"ProductId\":1,\r\n    // \"score\":3\r\n    \"replay\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/node/api-v1/reviews",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Review",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/node/api-v1/reviews/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"reviews",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Reviews",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"comment\":\"bad\",\r\n    \"score\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/node/api-v1/reviews/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"reviews",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Review",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/node/api-v1/reviews/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"reviews",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Shopping Cart",
+			"item": [
+				{
+					"name": "Create Shopping Cart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"0f0ec586-11af-4b2c-a265-9db2364681eb\",\r\n    \"quantity\":2,\r\n    \"productId\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/node/api-v1/shopping-cart",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"shopping-cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Shopping Cart",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/node/api-v1/shopping-cart?page=1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"shopping-cart"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Shopping Cart",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/node/api-v1/shopping-cart/2",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"shopping-cart",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Shopping Cart",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"quantity\":5,\r\n    \"detail\":\"red\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/node/api-v1/shopping-cart/7",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"shopping-cart",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Shopping Cart User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/node/api-v1/shopping-cart/0f0ec586-11af-4b2c-a265-9db2364681eb",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"shopping-cart",
+								"0f0ec586-11af-4b2c-a265-9db2364681eb"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Discount",
+			"item": [
+				{
+					"name": "Use Discounte",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/node/api-v1/discount/ok?idCart=1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"discount",
+								"ok"
+							],
+							"query": [
+								{
+									"key": "idCart",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Discount",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/node/api-v1/discount",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"discount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Discount",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ok\",\r\n    \"endTime\": \"2022,30,4\",\r\n    \"amount\": 4,\r\n    \"discountAmount\": 0.3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/node/api-v1/discount",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"discount"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Discount",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"ok\",\r\n    \"endTime\": \"45\",\r\n    \"amount\": 15,\r\n    \"discountAmount\": 0.1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5000/node/api-v1/discount/2",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"discount",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Discount",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/node/api-v1/discount/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"discount",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment",
+			"item": [
+				{
+					"name": "Payment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/node/api-v1/payment/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"payment",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Uploade",
+			"item": [
+				{
+					"name": "Get All Images",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Reza/Pictures/apex.png"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Reza/Pictures/images.jfif"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Reza/Pictures/download.jfif"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/node/api-v1/uploade-img?page=1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"uploade-img"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Images Array",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Reza/Pictures/apex.png"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Reza/Pictures/images.jfif"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Reza/Pictures/download.jfif"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/node/api-v1/uploade-img/1",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"uploade-img",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Reza/Pictures/apex.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:5000/node/api-v1/uploade-img",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"uploade-img"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Image",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/node/api-v1/uploade-img/2",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"uploade-img",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get File Images",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5000/node/api-v1/uploade-img/4",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"node",
+								"api-v1",
+								"uploade-img",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

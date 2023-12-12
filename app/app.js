@@ -1,0 +1,41 @@
+import express from "express";
+import helmet from "helmet";
+import dotenv from "dotenv";
+import cors from "cors";
+import path from "path";
+import { notFound, globalHandler } from "../middlewares/globalErrorHandle.js";
+import { connectDb } from "../config/postgreSql.js";
+import userRoutes from "../routes/userRoute.js";
+import productRoutes from "../routes/productRoute.js";
+import categoryRoutes from "../routes/categoryRoute.js";
+import subCategoryroutes from "../routes/subCategoryRoute.js";
+import reviewsRoutes from "../routes/reviewsRoute.js";
+import shoppingCartRoutes from "../routes/shoppingCartRoute.js";
+import discountRoutes from "../routes/discountRoute.js";
+import paymentCartRoutes from "../routes/paymentCartRoute.js";
+import uploadeRoutes from "../routes/uploadeRoute.js";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+// middlewares
+connectDb();
+dotenv.config();
+const app = express();
+app.use(cors());
+app.use(helmet.xssFilter());
+app.use(express.json());
+app.use("/public", express.static(path.join(__dirname, "../public")));
+// routes
+app.use("/node/api-v1/user/", userRoutes);
+app.use("/node/api-v1/product/", productRoutes);
+app.use("/node/api-v1/category/", categoryRoutes);
+app.use("/node/api-v1/sub-category/", subCategoryroutes);
+app.use("/node/api-v1/reviews/", reviewsRoutes);
+app.use("/node/api-v1/shopping-cart/", shoppingCartRoutes);
+app.use("/node/api-v1/discount/", discountRoutes);
+app.use("/node/api-v1/payment/", paymentCartRoutes);
+app.use("/node/api-v1/uploade-img/", uploadeRoutes);
+app.use(globalHandler);
+app.use(notFound);
+export default app;
